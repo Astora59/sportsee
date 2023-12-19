@@ -1,0 +1,28 @@
+.headerStyle {
+    background-color: black;
+}
+
+.navStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.listStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 219px;
+    list-style-type: none;
+    
+}
+
+.nav_options {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}

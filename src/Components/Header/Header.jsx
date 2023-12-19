@@ -1,23 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import classes from "./Header.module.scss"
 import Logo from "../../logo.svg"
 
 export default function Header() {
-    return <header>
-        <nav>
+    return <header className={classes.headerStyle}>
+        <nav className={classes.navStyle}>
             <Link to="/"><img src={Logo} alt="logo sportsee"/></Link>
-            <ul>
+            <ul className={classes.listStyle}>
                 <li>
-                    <Link to="/">Accueil</Link>
+                    <Link to="/" className={classes.nav_options}>Accueil</Link>
                 </li>
                 <li>
-                    <Link to="/">Profil</Link>
+                    <Link to="/" className={classes.nav_options}>Profil</Link>
                 </li>
                 <li>
-                    <Link to="/">Réglages</Link>
+                    <Link to="/" className={classes.nav_options}>Réglages</Link>
                 </li>
                 <li>
-                    <Link to="/">Communauté</Link>
+                    <Link to="/" className={classes.nav_options}>Communauté</Link>
                 </li>
             </ul>
         </nav>
