@@ -1,50 +1,23 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { useState, useEffect } from 'react';
 
-const data = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+export const UserData = () => {
+  const [projects, setProjects] = useState([])
+  const [useMock, setUseMock] = useState(false)
+
+  useEffect(() => {
+      async function fetchData(id) {
+          const response = await fetch(useMock ? "http://localhost:3001/userMainData.json" : `http://localhost:3000/user/${id}"`);
+          const data = response.json();
+          setProjects(data)
+          
+      }
+      fetchData();
+  }, [useMock])
+  const handleSwitchSourceData = () => {
+      setUseMock(!useMock)
+  }}
 
 export default class Example extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/simple-bar-chart-tpz8r';
@@ -68,8 +41,8 @@ export default class Example extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
-          <Bar dataKey="uv" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
+          <Bar dataKey="pv" fill="black" activeBar={<Rectangle fill="black" stroke="black" />} />
+          <Bar dataKey="uv" fill="#FF0101" activeBar={<Rectangle fill="#FF0101" stroke="purple" />} />
         </BarChart>
       </ResponsiveContainer>
     );
