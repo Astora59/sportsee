@@ -4,9 +4,9 @@ import SideBar from "../../Components/Sidebar/Sidebar";
 import DashBoard from "../../Components/Dashboard/Dashboard";
 import classes from "./Home.module.scss";
 import { Link } from "react-router-dom"
-import { UserData } from "../../Service/API"
 
-export default function Home(data) {
+
+export default function Home() {
  
     return(
         <>    
