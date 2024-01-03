@@ -4,14 +4,17 @@
  import Header from "../../Components/Header/Header"
  import Sidebar from "../../Components/Sidebar/Sidebar"
  import Dashboard from "../../Components/Dashboard/Dashboard"
+ import classes from "./Userpage.module.scss"
 
 
 export default function Userpage() {
     return (
         <>
             <Header />
-            <Sidebar />
-            <Dashboard />
+            <div className={classes.pageLayout}>
+                <Sidebar />
+                <Dashboard />
+            </div>
         </>
         
     )
