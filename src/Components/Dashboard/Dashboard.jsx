@@ -6,6 +6,7 @@ import Sidebar from "../../Components/Sidebar/Sidebar"
 import UseFetchUserData from "../../Service/useFetchUserData"
 import { DailyActivityChart } from "../Charts/dailyActivityChart/DailyActivityChart"
 import { PerformanceChart } from "../Charts/PerformanceChart/PerformanceChart"
+import { SessionsChart } from "../Charts/SessionsChart/SessionsChart"
 import classes from "./Dashboard.module.scss"
 
 
@@ -29,6 +30,7 @@ const Dashboard = () => {
             <div className={classes.dashboard_style}>
                 <DailyActivityChart />
                 <PerformanceChart />
+                <SessionsChart />
             </div>
             
 

@@ -46,12 +46,10 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
-
-  render() {
+export const SessionsChart = () =>  {
+  
     return (
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width={300} height={263}>
         <LineChart
           width={500}
           height={300}
@@ -64,8 +62,8 @@ export default class Example extends PureComponent {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" tickLine={false}/>
-          <YAxis tickLine={false} />
+          <XAxis dataKey="name" axisLine={false} tickLine={false} />
+          <YAxis axisLine={false} tickCount="0" tickLine={false}/>
           <Tooltip />
           <Legend />
           <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
@@ -74,4 +72,4 @@ export default class Example extends PureComponent {
       </ResponsiveContainer>
     );
   }
-}
+
