@@ -7,6 +7,31 @@
     justify-content: flex-start;
 }
 
+.generalLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.chartLayout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 .dashboard_style {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.macroLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+}
+
+.homeMessage {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: flex-start;
 }

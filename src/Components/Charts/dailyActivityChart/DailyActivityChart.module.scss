@@ -3,3 +3,14 @@
     border-radius: 5px;
     padding: 20px;
 }
+
+.graphTitle {
+    display: flex;
+    justify-content: flex-start;
+    color: #20253A;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 160% */
+}

@@ -9,7 +9,7 @@ const UseFetchUserData  = (id) => {
     const [mainData, setMainData] = useState(null);
     const [activity, setActivity] = useState(null);
     const [performance, setPerformance] = useState(null);
-    const [sessions, setSessions] = useState(null);
+    const [session, setSessions] = useState(null);
     useEffect(() => {
         const fetchData = async () => {
             let listUrls = [];  
@@ -18,11 +18,13 @@ const UseFetchUserData  = (id) => {
                 listUrls.push(`http://localhost:3001/mock/${id}/userActivity.json`);
                 listUrls.push(`http://localhost:3001/mock/${id}/userPerformance.json`);
                 listUrls.push(`http://localhost:3001/mock/${id}/userAverageSessions.json`);
+                console.log("mock")
             } else {
                 listUrls.push(`http://localhost:3000/user/${id}`);
                 listUrls.push(`http://localhost:3000/user/${id}/activity`);
                 listUrls.push(`http://localhost:3000/user/${id}/performance`);
                 listUrls.push(`http://localhost:3000/user/${id}/average-sessions`);
+                console.log("API")
             }
             const requests = listUrls.map((url) => fetch(url));
             const responses = await Promise.all(requests);
@@ -35,6 +37,7 @@ const UseFetchUserData  = (id) => {
             setPerformance(performanceDatas.data);
             const sessionDatas = await responses[3].json();
             setSessions(sessionDatas.data);
+            
 
         }
         fetchData();
@@ -47,7 +50,7 @@ const UseFetchUserData  = (id) => {
         mainData,
         activity,
         performance,
-        sessions 
+        session
 
     }
     
