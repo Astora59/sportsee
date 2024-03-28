@@ -1,3 +1,48 @@
 .scoreStyle {
     background-color: #FBFBFB;
+    border-radius: 20px;
+}
+
+.legendStyle {
+    background-color: #FFF;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.custom_legend_score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+    &_score {
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+    &_objectif {
+      text-align: center;
+      color: #74798C;
+      font-weight: 600;
+    }
+  }
+
+.whiteBackground {
+    background-color: #FFF;
+    padding: 50px;
+    border-radius: 50%;
+  }
+
+.centeredGraph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
 }

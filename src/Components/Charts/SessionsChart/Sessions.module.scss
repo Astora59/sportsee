@@ -1,6 +1,53 @@
 .sessionsChart_style {
     background-color: #FF0000;
-    width: 258px;
-    height: 263px;
     flex-shrink: 0;
+    border-radius: 10px;
+    
 }
+
+.custom_tooltip {
+    background-color: #FFF;
+    padding: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.bigDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFF;
+    opacity: 0.7;
+}
+
+.smallDot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+.customCursor {
+    width: 79px;
+    height: 397.523px;
+    opacity: 0.0975;
+    background: #000;
+
+}
+
+.sessionTitle {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    opacity: 0.504;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 34px;
+    width: 147px;
+    text-align: left;
+}
+
+

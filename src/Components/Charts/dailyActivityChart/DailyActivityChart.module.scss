@@ -1,7 +1,9 @@
 .activityChart {
     background-color: #FBFBFB;
     border-radius: 5px;
-    padding: 20px;
+    padding: 40px;
+    padding-bottom: 50px;
+    
 }
 
 .graphTitle {
@@ -13,4 +15,56 @@
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 160% */
+}
+
+.activityChart {
+    margin: 20px;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-between;
+}
+
+.circleB {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #282D30;
+}
+
+.circleR {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #FF0000;
+}
+
+.textBdisplay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.textB {
+    color: #74798C;
+    font-weight: 500;
+}
+
+.graphLegend {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.custom_tooltip {
+    display: flex;
+    flex-direction: column;
+    background-color: #E60000;
+    padding: 10px;
+}
+
+.customKilo {
+    color: #FFF;
 }

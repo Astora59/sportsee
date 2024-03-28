@@ -30,25 +30,30 @@ const Dashboard = () => {
     
     return (
         <div className={classes.chart_style}>
-             <button onClick={() => setMockUsage(!mockUsage)}>Utilisation des données {mockUsage ? "API" : "mock"}</button>
+             <button className={classes.buttonSize} onClick={() => setMockUsage(!mockUsage)}>Utilisation des données {mockUsage ? "API" : "mock"}</button>
             <div className={classes.homeMessage}>
-                <h1>Bonjour</h1>
+                <h1>Bonjour <span className={classes.redName}>{mainData?.userInfos.firstName}</span></h1>
                 <p>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
             </div>
            
             
             <div className={classes.generalLayout}>
                 <div className={classes.dashboard_style}>
-                    <DailyActivityChart activity={activity}/>
-                    <div className={classes.chartLayout}>
-                        <SessionsChart session={session} />
-                        <PerformanceChart performance={performance} />
-                        <ScoreChart />
-                        
-                    </div>
+                    {(activity && session && performance && mainData) && (
+                        <>
+                            <DailyActivityChart activity={activity}/>
+                            <div className={classes.chartLayout}>
+                                <SessionsChart session={session} />
+                                <PerformanceChart performance={performance} />
+                                <ScoreChart mainData={mainData}/>
+                            
+                            </div>
+                        </>
+                    )}
+                    
                 </div>
                 <div className={classes.macroLayout}>
-                    <Macros iconSrc={fireCalories} altIcon="burned calories icon" macroNumber={mainData?.keyData.calorieCount} macroInfo="calories">
+                    <Macros iconSrc={fireCalories} altIcon="burned calories icon" macroNumber={mainData?.keyData.calorieCount} macroInfo="calories" color="#FF0000">
                         <p>Kcal</p>
                     </Macros>
                     <Macros iconSrc={proteines} altIcon="proteines icon" macroNumber={mainData?.keyData.proteinCount} macroInfo="protéines" className={classes.caloriesStyle} />
